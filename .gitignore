@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.build_env/
+build/
+dist/
+*.spec
+*.zip
+原神剧情辅助_免安装版*/
+更新说明_v[2-5].txt
+assets/raiden-sidebar.png
+assets/raiden-sword-bg.png
+assets/raiden-app-icon.png

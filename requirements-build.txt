@@ -1,0 +1,4 @@
+pyinstaller>=6.0,<7
+pystray>=0.19,<1
+pillow>=10,<13
+customtkinter>=5.2,<6
