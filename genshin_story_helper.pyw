@@ -30,7 +30,7 @@ except ImportError:
     ImageDraw = None
 
 
-APP_TITLE = "原神剧情辅助"
+APP_TITLE = "把你砌进神像里"
 GAME_PROCESSES = {"yuanshen.exe", "genshinimpact.exe"}
 GAME_WINDOW_TITLES = {"原神", "genshin impact"}
 
@@ -744,7 +744,7 @@ class LegacyStoryHelperApp:
         title_group.pack(side="left", fill="y")
         ctk.CTkLabel(
             title_group,
-            text="原神剧情辅助",
+            text="把你砌进神像里",
             font=("Microsoft YaHei UI", 25, "bold"),
             text_color=self.COLORS["text"],
         ).pack(anchor="w")
@@ -1164,14 +1164,14 @@ class LegacyStoryHelperApp:
             try:
                 self._tray_icon.notify(
                     "已检测到原神，权限正常。切回游戏后即可使用 F6 / F7 / F8。",
-                    "原神剧情辅助已就绪",
+                    "把你砌进神像里已就绪",
                 )
             except Exception:
                 pass
         self._last_ready = ready
 
         if self._tray_icon is not None:
-            self._tray_icon.title = "原神剧情辅助 - " + (
+            self._tray_icon.title = "把你砌进神像里 - " + (
                 "已就绪" if ready else "等待原神"
             )
 
@@ -1257,7 +1257,7 @@ class LegacyStoryHelperApp:
         title_group.pack(side="left")
         ctk.CTkLabel(
             title_group,
-            text="御前剧情助手",
+            text="把你砌进神像里",
             font=("Microsoft YaHei UI", 25, "bold"),
             text_color=self.COLORS["text"],
         ).pack(anchor="w")
@@ -1635,13 +1635,13 @@ class LegacyStoryHelperApp:
             try:
                 self._tray_icon.notify(
                     "原神已获得输入焦点，自动按键可以执行。",
-                    "御前剧情助手已就绪",
+                    "把你砌进神像里已就绪",
                 )
             except Exception:
                 pass
         self._last_ready = ready
         if self._tray_icon is not None:
-            self._tray_icon.title = "御前剧情助手 - " + ("可执行" if ready else "等待原神")
+            self._tray_icon.title = "把你砌进神像里 - " + ("可执行" if ready else "等待原神")
         self._status_after_id = self.root.after(350, self._refresh_status)
 
 
@@ -1742,7 +1742,7 @@ class StoryHelperApp:
         title_group.pack(side="left")
         ctk.CTkLabel(
             title_group,
-            text="御前剧情助手",
+            text="把你砌进神像里",
             font=("Microsoft YaHei UI", 21, "bold"),
             text_color=self.COLORS["text"],
         ).pack(anchor="w")
@@ -2288,13 +2288,13 @@ class StoryHelperApp:
                 mode_text = "后台窗口" if background_mode else "前台窗口"
                 self._tray_icon.notify(
                     f"原神{mode_text}已经连接，可以执行自动输入。",
-                    "御前剧情助手已就绪",
+                    "把你砌进神像里已就绪",
                 )
             except Exception:
                 pass
         self._last_ready = ready
         if self._tray_icon is not None:
-            self._tray_icon.title = "御前剧情助手 - " + ("已就绪" if ready else "等待原神")
+            self._tray_icon.title = "把你砌进神像里 - " + ("已就绪" if ready else "等待原神")
         self._status_after_id = self.root.after(400, self._refresh_status)
 
     def _poll_hotkeys(self) -> None:
@@ -2339,7 +2339,7 @@ class StoryHelperApp:
             try:
                 self._tray_icon.notify(
                     "助手仍在后台运行；双击雷电将军头像可恢复窗口。",
-                    "御前剧情助手",
+                    "把你砌进神像里",
                 )
             except Exception:
                 pass
@@ -2398,7 +2398,7 @@ class StoryHelperApp:
         title_group.pack(side="left")
         ctk.CTkLabel(
             title_group,
-            text="原神剧情辅助",
+            text="把你砌进神像里",
             font=("Microsoft YaHei UI", 26, "bold"),
             text_color=self.COLORS["text"],
         ).pack(anchor="w")
@@ -2826,13 +2826,13 @@ class StoryHelperApp:
             try:
                 self._tray_icon.notify(
                     "原神已获得输入焦点，已开启的功能可以执行。",
-                    "原神剧情辅助",
+                    "把你砌进神像里",
                 )
             except Exception:
                 pass
         self._last_ready = ready
         if self._tray_icon is not None:
-            self._tray_icon.title = "原神剧情辅助 - " + (
+            self._tray_icon.title = "把你砌进神像里 - " + (
                 "输入可执行" if ready else "输入已暂停"
             )
         self._status_after_id = self.root.after(400, self._refresh_status)
@@ -2881,7 +2881,7 @@ def main() -> int:
     if ctypes.get_last_error() == 183:
         user32.MessageBoxW(
             None,
-            "原神剧情辅助已经在运行，请查看右下角系统托盘。",
+            "把你砌进神像里已经在运行，请查看右下角系统托盘。",
             APP_TITLE,
             0x40,
         )

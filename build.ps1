@@ -18,11 +18,11 @@ if (-not (Test-Path -LiteralPath $buildPython)) {
     --collect-all customtkinter `
     --add-data ((Join-Path $projectRoot 'assets\raiden-app-icon-256.png') + ';assets') `
     --icon (Join-Path $projectRoot 'assets\raiden-app-icon.ico') `
-    --name '原神剧情辅助' `
+    --name '把你砌进神像里' `
     --distpath (Join-Path $projectRoot 'dist') `
     --workpath (Join-Path $projectRoot 'build\work') `
     --specpath (Join-Path $projectRoot 'build') `
     (Join-Path $projectRoot 'genshin_story_helper.pyw')
 
 Write-Host ''
-Write-Host ('构建完成：' + (Join-Path $projectRoot 'dist\原神剧情辅助.exe')) -ForegroundColor Green
+Write-Host ('构建完成：' + (Join-Path $projectRoot 'dist\把你砌进神像里.exe')) -ForegroundColor Green
